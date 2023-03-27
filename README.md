@@ -1,4 +1,4 @@
-# Neovim from scratch
+# Neovim config
 
 **Update** When I initially created this repo I didn't anticipate the amount of breaking changes introduced by the rapidly developing plugin ecosystem. If you'd like to use the same basic config as this one as a base I can also recommend my newer repo: [nvim-basic-ide](https://github.com/LunarVim/nvim-basic-ide)
 
@@ -15,7 +15,7 @@ This config requires [Neovim v0.8.0](https://github.com/neovim/neovim/releases).
 Clone the repository into the correct location (make a backup your current `nvim` directory if you want to keep it).
 
 ```
-git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+git clone https://github.com/elviswangari/nvim.git ~/.config/nvim
 ```
 
 Run `nvim` in your terminal and wait for the plugins to be installed. You will notice treesitter pulling in a bunch of language parsers the next time you open Neovim.

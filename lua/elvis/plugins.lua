@@ -1,6 +1,6 @@
 local fn = vim.fn
 
--- Automatically install packer
+-- Automatically install packeqr
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
 	PACKER_BOOTSTRAP = fn.system({
@@ -56,9 +56,45 @@ return packer.startup(function(use)
   use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
   use { "goolord/alpha-nvim", commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31" }
 	use {"folke/which-key.nvim"}
- 
+  --use {"jackMort/ChatGPT.nvim"}
+  --use {"MunifTanjim/nui.nvim"}
 
-	-- Colorschemes
+  -- Packer
+use({
+  "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup({
+        -- optional configuration
+        --keymaps = {
+         --submit = "<C-s>"
+      --}
+	          
+keymaps = {
+            close = { "<C-c>", "<Esc>" },
+            yank_last = "<C-y>",
+            yank_last_code = "<C-k>",
+            scroll_up = "<C-u>",
+            scroll_down = "<C-d>",
+            toggle_settings = "<C-o>",
+            new_session = "<C-n>",
+            cycle_windows = "<Tab>",
+            -- in the Sessions pane
+            select_session = "<Space>",
+            rename_session = "r",
+            delete_session = "d",
+            submit = '<C-t>',
+          }
+        })
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+})
+
+  --liveserver
+  -- Colorschemes
   use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
   use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
 

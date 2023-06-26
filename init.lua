@@ -1,5 +1,6 @@
 require("elvis.semi")
 --require "elvis.icons"
+--require "elvis.chartgpt"
 require "elvis.options"
 require "elvis.keymaps"
 require "elvis.plugins"
@@ -21,6 +22,3 @@ require "elvis.indentline"
 require "elvis.alpha"
 require "elvis.whichkey"
 require "elvis.autocommands"
-
-
-

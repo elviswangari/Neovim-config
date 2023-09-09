@@ -1,4 +1,5 @@
-require("elvis.semi")
+--require "elvis.eslint"
+--require("elvis.semi")
 --require "elvis.icons"
 --require "elvis.chartgpt"
 require "elvis.options"
